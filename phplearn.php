@@ -44,7 +44,6 @@ function addCache($tabname,$sql,$data){
 
       $foo = 123;
       $abc = &$foo;
-
       $abc = 456;
       echo $foo."</br>";
       echo $abc."</br>";
@@ -72,6 +71,52 @@ Eot;
       echo "hahh"."<br>";
 
       echo "git 添加成功了";
+
+      echo "$bear"."</br>";
+
+      $arr = array('foo' =>"bar" ,12=> ture );
+      print_r($arr);
+      echo $arr["foo"];
+      echo $arr[12];
+
+      /**
+       *
+       */
+      class Person
+      {
+        var $name;
+        function say()
+        {
+          echo "Doing foo.";
+        }
+      }
+
+      $p = new Person;
+      $p->name = "Tom";
+      $p->say();
+
+      $file_handle = fopen("info.text","w");
+      var_dump($file_handle);
+
+      echo "<br>";
+      $dir_handle = opendir("js");
+      var_dump($dir_handle);
+
+      echo "<br>";
+      $link_mysql = mysql_connect("localhost","root","123456");
+      var_dump($link_mysql);
+
+      echo "<br>";
+      $im_handle = imagecreate(100,50);
+      var_dump($im_handle);
+
+      echo "<br>";
+      $xml_parser = xml_parser_create();
+      var_dump($xml_parser);
+//NULL 类型
+
+
+
      ?>
   </body>
 </html>
