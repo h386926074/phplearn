@@ -115,8 +115,63 @@ Eot;
       var_dump($xml_parser);
 //NULL 类型
 
+      $b= "value";
+      unset($b);
+      var_dump($b);
+
+
+      $foo = 10;
+      $bar = (boolean)$foo;
+      var_dump($bar);
+
+      $str = "1234.456abc";
+      $int = intval($str);
+      echo "$int";
 
 
      ?>
+     <?php
+      $foo = "5bar";
+      $bar = true;
+      settype($foo,"integer");
+      settype($bar,"string");
+      echo "<br>$foo   $bar"."<br>";
+
+      echo gettype($foo);
+      var_dump($bar);
+
+      if (is_int($foo)) {
+        $foo +=4;
+        echo "Integer $foo";
+      }
+
+      define("CON_INT",100);
+      echo CON_INT;
+
+      echo PHP_OS;
+
+      echo __FILE__;
+      echo __LINE__;
+
+      ?>
+
+      <?php
+      echo "<br>";
+        echo "当前系统操作系统是：".PHP_OS."<br>";
+        $a = 10%3;
+        var_dump($a)."\n";
+
+
+        $num = rand()%100;
+        echo $num;
+
+
+
+       ?>
+       <?php
+       $site = "http://www.w3school.com.cn/";
+       fopen($site,"r")or die("Unable to connect to $site");
+       ?>
+
   </body>
 </html>
