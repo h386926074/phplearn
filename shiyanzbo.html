@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>云上十堰</title>
+<style>
+body,a,img,div,p,span,ol,ul,li,h1,h2,h3,h4,h5,h6 {margin:0px;padding:0px;border:0px;outline:0px;list-style:none;font:inherit;}
+body {
+  font-size: 20px;
+  background: #2b2b2b;
+  color: #666666;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+}
+video {
+  display: block;
+}
+ul {
+  border-top: 1px solid #37b1e5;
+  overflow: hidden;
+  background-color: #404040;
+}
+ul li {
+  border-bottom: 1px solid #666666;
+  line-height: 60px;
+  text-align: center;
+  float: left;
+  width: 50%;
+  background: url(http://www.hbtv.com.cn/cjmedia/bg_corner_gray.png) no-repeat 100% 100%;
+}
+ul li.playing {
+  color: #37b1e5;
+  border-color: #37b1e5;
+  background-image: url(http://www.hbtv.com.cn/cjmedia/bg_corner_blue.png);
+  box-shadow: 0px 0px 10px 5px #37b1e5;
+}
+#liveradio {
+  display: block;
+  position: absolute;
+  top: -999px;
+  left: 0px;
+  width: 100%;
+  height: 180px;
+  z-index: 999;
+}
+#video_toggle {
+  font-size: 14px;
+  width: 70%;
+  margin: 10px auto;
+  border-radius: 15px;
+  background-color: #404040;
+}
+#video_toggle span {
+  border-radius: 15px;
+  display: inline-block;
+  width: 50%;
+  line-height: 25px;
+  height: 25px;
+  text-align: center;
+}
+#video_toggle span.playtoggle {
+  background-color: #37b1e5;
+  color: #2b2b2b;
+}
+#copyright {
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+  color: #ffffff;
+  background: #000000;
+  letter-spacing: 4px;
+}
+</style>
+</head>
+
+<body>
+<video id="liveplayer" type="application/x-mpegURL" width="100%" controls="controls" poster="http://img.cjyun.org/a/10139/201607/449bf5e35059767780f33a835b5244e3.png" src="http://live.cjyun.org/video/s10008-ggxw/index.m3u8" webkit-playsinline="webkit-playsinline"></video>
+<div id="video_toggle"><span class="playtoggle">电视</span><span>广播</span></div>
+<img id="liveradio" src="http://img.cjyun.org/a/10139/201607/640638f45e76f484695dea60fa8883b7.jpg">
+<ul>
+<li stream="http://61.184.93.197:5011/vod/hls/3.m3u8" >十堰新闻频道</li>
+<li stream="http://61.184.93.197:5011/vod/hls/4.m3u8" >十堰公共频道</li>
+
+
+</ul>
+<ul style="display:none;">
+ <li stream="http://http.qingting.fm/61094.mp3" img="http://img.cjyun.org/a/10139/201607/640638f45e76f484695dea60fa8883b7.jpg?2016080826">十堰新闻综合广播</li>
+    <li stream="http://http.qingting.fm/61100.mp3" img="http://img.cjyun.org/a/10139/201607/649fd4b218dc9d3a12e6cf7756b4b162.jpg?2016080826">十堰交通音乐广播</li>
+</ul>
+<div id="copyright">长江云共建单位</div>
+<script type="text/javascript" src="http://res.cjyun.org/assets/js/jquery.js"></script>
+<script>
+var iapple=/(iphone|ipod|ipad)/i.test(navigator.userAgent);
+var liveplayer=$("#liveplayer").get(0);
+var stream = "http://61.184.93.197:5011/vod/hls/3.m3u8";
+var img = "http://www.hbtv.com.cn/cjmedia/hbnews.jpg";
+$(document).ready(function(){
+  mobiwidth = $(window).width();
+  mobiheight = mobiwidth*0.8;
+  $("#liveplayer").height(mobiheight);
+  $("#liveradio").height(mobiheight);
+
+  $("#video_toggle").on("click","span",function(){
+    $("#video_toggle span").removeClass("playtoggle");
+    if ($(this).addClass("playtoggle").index() == 1) {
+      $("ul").hide().last().show();
+    } else {
+      $("ul").hide().first().show();
+    }
+  });
+
+  $("ul").on("click", "li", function(){
+    $this = $(this);
+    $("ul li").removeClass("playing");
+    $this.addClass("playing");
+    stream = $this.attr("stream");
+    img = $this.attr("img");
+    if (typeof img == "undefined")
+    {
+      $("#liveradio").animate({top:"-"+mobiheight}, 1000);
+    }
+    else
+    {
+//iphone和andriod都用m3u8的流
+//      if (!iapple) {
+//        stream = $this.attr("mp3");
+//      }
+      $("#liveradio").attr({"src":img}).animate({top:0}, 1000);
+    }
+    liveplayer.src = stream;
+    liveplayer.load();
+    liveplayer.play();
+  });
+});
+
+function onBridgeReady(){
+  WeixinJSBridge.call('hideOptionMenu');
+  WeixinJSBridge.call('hideToolbar');
+}
+
+if (typeof WeixinJSBridge == "undefined"){
+  if( document.addEventListener ) {
+    document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+  }else if (document.attachEvent) {
+    document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+    document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+  }
+}else{
+  onBridgeReady();
+}
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    var shareData = {
+        title: "云上十堰",
+        desc: "十堰电视、广播网络直播",
+        link: window.location.href,
+        imgUrl: "http://img.cjyun.org/a/10139/201607/449bf5e35059767780f33a835b5244e3.png}"
+    };
+    document.write("<scr"+"ipt type='text/javascript' src='http://hudong.hbtv.com.cn/fpms/jsapi/6?url="+encodeURIComponent(window.location.href)+"'></scr"+"ipt>");
+</script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+{
+  "code" : "200",
+  "retinfo" : "请求成功！",
+  "list" : {
+    "0" : {
+      "cid" : "1",
+      "title" : "头条",
+      "fixed" : "1",
+      "def" : "1",
+      "sign" : "0",
+      "type" : "local"
+    },
+    "1" : {
+      "cid" : "2",
+      "title" : "政情",
+      "fixed" : "1",
+      "def" : "1",
+      "sign" : "0",
+      "type" : "government"
+    },
+    "2" : {
+      "cid" : "18",
+      "title" : "社会",
+      "fixed" : "1",
+      "def" : "1",
+      "sign" : "0",
+      "type" : "shiyan"
+    },
+    "3" : {
+      "cid" : "9",
+      "title" : "图片",
+      "fixed" : "1",
+      "def" : "1",
+      "sign" : "0",
+      "type" : "image"
+    },
+    "4" : {
+      "cid" : "3",
+      "title" : "热点",
+      "fixed" : "1",
+      "def" : "1",
+      "sign" : "0",
+      "type" : "current"
+    },
+    "5" : {
+      "cid" : "12",
+      "title" : "揭秘",
+      "fixed" : "1",
+      "def" : "1",
+      "sign" : "0",
+      "type" : "decryption"
+    },
+    "6" : {
+      "cid" : "28",
+      "title" : "直播",
+      "fixed" : "1",
+      "def" : "1",
+      "sign" : "0",
+      "type" : "liveplay"
+    },
+    "7" : {
+      "cid" : "5",
+      "title" : "县市",
+      "fixed" : "1",
+      "def" : "1",
+      "sign" : "0",
+      "type" : "city"
+    },
+    "8" : {
+      "cid" : "6",
+      "title" : "发布",
+      "fixed" : "0",
+      "def" : "0",
+      "sign" : "0",
+      "type" : "sina"
+    },
+    "9" : {
+      "cid" : "13",
+      "title" : "夜话",
+      "fixed" : "0",
+      "def" : "0",
+      "sign" : "0",
+      "type" : "mood"
+    },
+    "10" : {
+      "cid" : "16",
+      "title" : "旅游",
+      "fixed" : "0",
+      "def" : "0",
+      "sign" : "1",
+      "type" : "travel"
+    },
+    "11" : {
+      "cid" : "4",
+      "title" : "娱乐",
+      "fixed" : "0",
+      "def" : "0",
+      "sign" : "0",
+      "type" : "ent"
+    },
+    "12" : {
+      "cid" : "11",
+      "title" : "周边",
+      "fixed" : "0",
+      "def" : "0",
+      "sign" : "0",
+      "type" : "periphery"
+    },
+    "13" : {
+      "cid" : "7",
+      "title" : "十堰日报",
+      "fixed" : "0",
+      "def" : "0",
+      "sign" : "1",
+      "type" : "ribao"
+    },
+    "14" : {
+      "cid" : "8",
+      "title" : "十堰晚报",
+      "fixed" : "0",
+      "def" : "0",
+      "sign" : "1",
+      "type" : "wanbao"
+    },
+  },
+  "listv" : {
+    "0" : {
+      "title" : "新闻频道",
+      "list" : {
+        "0" : {
+          "cid" : "1",
+          "title" : "头条",
+          "fixed" : "1",
+          "def" : "1",
+          "sign" : "0",
+          "type" : "local"
+        },
+        "1" : {
+          "cid" : "2",
+          "title" : "政情",
+          "fixed" : "1",
+          "def" : "1",
+          "sign" : "0",
+          "type" : "government"
+        },
+        "2" : {
+          "cid" : "18",
+          "title" : "社会",
+          "fixed" : "1",
+          "def" : "1",
+          "sign" : "0",
+          "type" : "shiyan"
+        },
+        "3" : {
+          "cid" : "9",
+          "title" : "图片",
+          "fixed" : "1",
+          "def" : "1",
+          "sign" : "0",
+          "type" : "image"
+        },
+        "4" : {
+          "cid" : "3",
+          "title" : "热点",
+          "fixed" : "1",
+          "def" : "1",
+          "sign" : "0",
+          "type" : "current"
+        },
+        "5" : {
+          "cid" : "12",
+          "title" : "揭秘",
+          "fixed" : "1",
+          "def" : "1",
+          "sign" : "0",
+          "type" : "decryption"
+        },
+        "6" : {
+          "cid" : "28",
+          "title" : "直播",
+          "fixed" : "1",
+          "def" : "1",
+          "sign" : "0",
+          "type" : "liveplay"
+        },
+        "7" : {
+          "cid" : "5",
+          "title" : "县市",
+          "fixed" : "1",
+          "def" : "1",
+          "sign" : "0",
+          "type" : "city"
+        },
+        "8" : {
+          "cid" : "6",
+          "title" : "发布",
+          "fixed" : "0",
+          "def" : "0",
+          "sign" : "0",
+          "type" : "sina"
+        },
+        "9" : {
+          "cid" : "13",
+          "title" : "夜话",
+          "fixed" : "0",
+          "def" : "0",
+          "sign" : "0",
+          "type" : "mood"
+        },
+        "10" : {
+          "cid" : "16",
+          "title" : "旅游",
+          "fixed" : "0",
+          "def" : "0",
+          "sign" : "1",
+          "type" : "travel"
+        },
+        "11" : {
+          "cid" : "4",
+          "title" : "娱乐",
+          "fixed" : "0",
+          "def" : "0",
+          "sign" : "0",
+          "type" : "ent"
+        },
+        "12" : {
+          "cid" : "11",
+          "title" : "周边",
+          "fixed" : "0",
+          "def" : "0",
+          "sign" : "0",
+          "type" : "periphery"
+        },
+        "13" : {
+          "cid" : "7",
+          "title" : "十堰日报",
+          "fixed" : "0",
+          "def" : "0",
+          "sign" : "1",
+          "type" : "ribao"
+        },
+        "14" : {
+          "cid" : "8",
+          "title" : "十堰晚报",
+          "fixed" : "0",
+          "def" : "0",
+          "sign" : "1",
+          "type" : "wanbao"
+        },
+      }
+    },
+    "1" : {
+      "title" : "县市区频道",
+      "list" : {
+        "0" : {
+          "cid" : "888",
+          "title" : "张湾区",
+          "fixed" : "0",
+          "def" : "1",
+          "sign" : "1",
+          "type" : "1",
+          "islink" : "1",
+          "linkurl" : "http://m.10yan.com"
+        },
+      }
+    },
+    "2" : {
+      "title" : "部门频道",
+      "list" : {
+        "0" : {
+          "cid" : "999",
+          "title" : "环保局",
+          "fixed" : "0",
+          "def" : "1",
+          "sign" : "1",
+          "type" : "1",
+          "islink" : "1",
+          "linkurl" : "http://m.10yan.com"
+        },
+      }
+    },
+  }
+}
