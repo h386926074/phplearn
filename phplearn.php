@@ -71,7 +71,7 @@ Eot;
 
       echo "hahh"."<br>";
 
-      
+      echo "git 添加成功了";
      ?>
   </body>
 </html>
