@@ -165,13 +165,18 @@ Eot;
         $num = rand()%100;
         echo $num;
 
+        // $site = "http://app.10yan.com.cn/";
+        // fopen($site,"r") or die("Unable to connect to $site\n");
+
+        // $output = shell_exec('ls -all');
+        $output = `ls -all`;
+        echo "<pre> $output </pre>";
+        $week = date("D");
+        echo "$week";
+       ?>
 
 
-       ?>
-       <?php
-       $site = "http://www.w3school.com.cn/";
-       fopen($site,"r")or die("Unable to connect to $site");
-       ?>
+
 
   </body>
 </html>
